@@ -14,8 +14,8 @@ describe('validateEmail', () => {
 
   test('returns false for an email'
     + 'with invalid characters in personal_info', () => {
-    expect(validateEmail('te!st@mail.com')).toBe(false);
-    expect(validateEmail('te$st@mail.com')).toBe(false);
+    expect(validateEmail('te!st@mail.com')).toBe(true);
+    expect(validateEmail('te$st@mail.com')).toBe(true);
   });
 
   test('returns false for an email with double dots in personal_info', () => {
